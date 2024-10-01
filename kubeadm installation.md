@@ -88,3 +88,10 @@ kubeadm version
 kubelet --version
 kubectl version --client
 
+9. Configure crictl to work with containerd
+ 
+    sudo crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock
+   
+10. initialize control plane
+
+    sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=172.31.89.68 --node-name master
