@@ -92,6 +92,6 @@ kubectl version --client
  
     sudo crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock
    
-10. initialize control plane
-
-    sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=172.31.89.68 --node-name master
+10. # initialize control plane :  --apiserver-advertise-address is public ip of vm on cloud
+    
+    sudo kubeadm init --pod-network-cidr=10.244.0.0/16
