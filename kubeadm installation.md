@@ -112,7 +112,7 @@ kubectl apply -f custom-resources.yaml
 
 Worker node :
 
-all the above steps to be done except kubeadm init 
+all the above steps to be done except kubeadm init to be done on 
 
 
     
