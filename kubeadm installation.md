@@ -45,9 +45,8 @@ lsmod | grep overlay
 #Verify that the net.bridge.bridge-nf-call-iptables, net.bridge.bridge-nf-call-ip6tables, and net.ipv4.ip_forward system variables are set to 1 in your sysctl config by running the following command:
 sysctl net.bridge.bridge-nf-call-iptables net.bridge.bridge-nf-call-ip6tables net.ipv4.ip_forward
 
-# Install container runtime
-   
-   curl -LO https://github.com/containerd/containerd/releases/download/v1.7.14/containerd-1.7.14-linux-amd64.tar.gz
+#Install container runtime
+  curl -LO https://github.com/containerd/containerd/releases/download/v1.7.14/containerd-1.7.14-linux-amd64.tar.gz
 sudo tar Cxzvf /usr/local containerd-1.7.14-linux-amd64.tar.gz
 curl -LO https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
 sudo mkdir -p /usr/local/lib/systemd/system/
