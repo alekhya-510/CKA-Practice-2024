@@ -111,7 +111,15 @@ kubectl apply -f custom-resources.yaml
 
 Worker node :
 
-all the above steps to be done except kubeadm init to be done on 
+all the above steps to be done except kubeadm init to be done on worker node
 
+we need to create directory as below
+
+mkdir -p $HOME/.kube
+and from master node copy contents of /etc/kubernetes/admin.conf to worker node $HOME/.kube/config
+
+Then join worker node by running following output on master node 
+kubeadm token create --print-join-command
+The output need to run on worker node
 
     
